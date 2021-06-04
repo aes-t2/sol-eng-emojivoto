@@ -1,0 +1,15 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: linkerd-viz-dashboard
+  namespace: linkerd-viz
+spec:
+  allow_upgrade:
+  - websocket
+  host: linkerd.amb-labs.io
+  host_rewrite: web.linkerd-viz.svc
+  prefix: /
+  remove_request_headers:
+  - Origin
+  service: web.linkerd-viz.svc:8084
+  timeout_ms: 60000
