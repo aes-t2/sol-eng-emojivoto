@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-svc
+  namespace: emojivoto-dev
+  annotations:
+    a8r.io/description: "gRPC API for voting and leaderboard. Lanaguage = Go"
+    a8r.io/owner: "Matt Turner"
+    a8r.io/chat: "https://datawire.slack.com/team/UMYTCRMT7"
+    a8r.io/bugs: "https://github.com/datawire/ambassador/issues"
+    a8r.io/logs: "https://app.datadoghq.com/logs/activation"
+    a8r.io/documentation: "https://www.getambassador.io/docs/latest/"
+    a8r.io/repository: "https://github.com/aes-t2/sol-eng-microservices-demo"
+    a8r.io/support: "https://datawire-oss.slack.com/archives/CB46TNG83"
+    a8r.io/runbook: "https://www.getambassador.io/docs/latest/topics/running/debugging/"
+    a8r.io/incidents: "https://app.datadoghq.com/incidents/settings"
+    a8r.io/uptime: "https://app.datadoghq.com/monitors/triggered?q=type%3Acustom%20status%3A%28alert%20OR%20warn%29"  # Update with appropriate value
+    a8r.io/performance: "https://linkerd.amb-labs.io/grafana/d/deployment/linkerd-deployment?orgId=1&var-deployment=voting&var-namespace=emojivoto&refresh=1m"  # Update with appropriate value
+    a8r.io/dependencies: "web-svc.emojivoto-dev, emoji-svc.emojivoto-dev"
+spec:
+  selector:
+    app: voting-svc
+  ports:
+  - name: grpc
+    port: 8080
+    targetPort: 8080
+  - name: prom
+    port: 8801
+    targetPort: 8801
+---
