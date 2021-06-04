@@ -1,0 +1,10 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: emojivoto-mapping
+  namespace: emojivoto
+spec:
+  host: emoji.amb-labs.io
+  precedence: 1
+  prefix: /
+  service: web-svc.emojivoto:80
