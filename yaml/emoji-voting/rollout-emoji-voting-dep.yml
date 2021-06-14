@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 70722f2f-fdd7-4a77-add8-0ef8d0cd36b7
+    getambassador.io/rolloutId: cb4cbe51-5c93-490d-8ac2-1b45c4b3a894
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: voting
