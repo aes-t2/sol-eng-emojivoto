@@ -18,6 +18,12 @@ metadata:
     a8r.io/uptime: "https://app.datadoghq.com/monitors/triggered?q=type%3Acustom%20status%3A%28alert%20OR%20warn%29"  # Update with appropriate value
     a8r.io/performance: "https://linkerd.amb-labs.io/grafana/d/deployment/linkerd-deployment?orgId=1&var-deployment=emoji&var-namespace=emojivoto&refresh=1m"  # Update with appropriate value
     a8r.io/dependencies: "web-svc.emojivoto, voting-svc.emojivoto"
+    a8r.io/rollouts.scm.branch: "main"
+    a8r.io/rollouts.scm.path: "yaml/emoji-svc"
+    a8r.io/rollouts.image-repo.type: "dockerhub"
+    a8r.io/rollouts.image-repo.name: "caseykurosawa/emojivoto-emoji-svc"
+    a8r.io/rollouts.deployment: "emoji"
+    a8r.io/rollouts.mappings: "emojivoto-mapping"
 spec:
   selector:
     app: emoji-svc
