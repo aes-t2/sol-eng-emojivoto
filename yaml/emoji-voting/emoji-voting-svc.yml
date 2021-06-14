@@ -11,7 +11,7 @@ metadata:
     a8r.io/bugs: "https://github.com/datawire/ambassador/issues"
     a8r.io/logs: "https://app.datadoghq.com/logs/activation"
     a8r.io/documentation: "https://www.getambassador.io/docs/latest/"
-    a8r.io/repository: "https://github.com/aes-t2/sol-eng-microservices-demo"
+    a8r.io/repository: "https://github.com/aes-t2/sol-eng-emojivoto"
     a8r.io/support: "https://datawire-oss.slack.com/archives/CB46TNG83"
     a8r.io/runbook: "https://www.getambassador.io/docs/latest/topics/running/debugging/"
     a8r.io/incidents: "https://app.datadoghq.com/incidents/settings"
