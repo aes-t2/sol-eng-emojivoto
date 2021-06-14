@@ -5,7 +5,7 @@ include ./common.mk
 all: build integration-tests
 
 build-base-docker-image:
-	docker build . -f Dockerfile-base -t "buoyantio/emojivoto-svc-base:$(IMAGE_TAG)"
+	docker build . -f Dockerfile-base -t "caseykurosawa/emojivoto-svc-base:$(IMAGE_TAG)"
 
 web:
 	$(MAKE) -C emojivoto-web
@@ -39,6 +39,6 @@ deploy-to-docker-compose:
 	docker-compose -f ./docker-compose.yml up -d
 
 push-%:
-	docker push buoyantio/emojivoto-$*:$(IMAGE_TAG)
+	docker push caseykurosawa/emojivoto-$*:$(IMAGE_TAG)
 
 push: push-svc-base push-emoji-svc push-voting-svc push-web
