@@ -6,8 +6,8 @@ EMOJISVC_HOST ?= localhost:8082
 WEBPACK_DEV_SERVER ?= http://localhost:8083
 INDEX_BUNDLE ?= webapp/dist/index_bundle.js
 
-K8S_VOTINGSVC_HOST ?= voting-svc.emojivoto:8080
-K8S_EMOJISVC_HOST ?= emoji-svc.emojivoto:8080
+K8S_VOTINGSVC_HOST ?= voting-svc.emojivoto-dev:8080
+K8S_EMOJISVC_HOST ?= emoji-svc.emojivoto-dev:8080
 
 all: clean protoc webpack package-web test package
 
