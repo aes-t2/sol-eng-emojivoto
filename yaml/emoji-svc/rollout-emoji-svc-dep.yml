@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: f0a3dfb1-88ba-4842-a9cd-df4a5193c06f
+    getambassador.io/rolloutId: 69aeb383-7f4f-423e-8458-16e7e505cbd8
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: emoji
@@ -23,34 +23,34 @@ spec:
       steps:
       - setWeight: 10
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 20
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 30
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 40
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 50
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 60
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 70
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 80
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 90
       - pause:
-          duration: 180
+          duration: 12
       - setWeight: 100
       - pause:
-          duration: 180
+          duration: 12
       trafficRouting:
         ambassador:
           mappings:
