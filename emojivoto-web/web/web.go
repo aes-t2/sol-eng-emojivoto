@@ -36,8 +36,8 @@ func propogateContextHttp(r *http.Request) context.Context {
 
 	// Get incoming telepresence header
 	telHeader := r.Header.Get("x-telepresence-intercept-id")
-	fmt.Printf("Incoming header %s found.", telHeader)
 	if telHeader != "" {
+		fmt.Printf("Incoming header %s found.", telHeader)
 		// if telepresence header is not empty, add it to context
 		telepresenceHeaders.telepresenceMetadata = metadata.New(map[string]string{"x-telepresence-intercept-id": telHeader})
 		ctx = metadata.NewOutgoingContext(ctx, telepresenceHeaders.telepresenceMetadata)
@@ -349,7 +349,7 @@ func (app *WebApp) indexHandler(w http.ResponseWriter, r *http.Request) {
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>Emoji Vote</title>
+			<title>Casey's Emoji Vote Chart</title>
 			<link rel="icon" href="/img/favicon.ico">
 			<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60040560-4"></script>
