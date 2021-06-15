@@ -12,8 +12,7 @@ The sum of this work is on https://github.com/aes-t2/sol-eng-emojivoto.
 
 Telepresence 2.3.1
 
-Tested on MacOS 11.4 Big Sur
-Parenthesis is tested version
+Tested on MacOS 11.4 Big Sur.  Version number in parenthesis was the version tested (6/15/2021).
 
 - Docker (20.10.6)
 - go (1.16.5)
