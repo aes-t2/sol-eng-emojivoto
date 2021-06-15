@@ -11,6 +11,7 @@ metadata:
   name: voting
   namespace: emojivoto
 spec:
+  revisionHistoryLimit: 1
   replicas: 2
   selector:
     matchLabels:
