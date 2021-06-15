@@ -101,4 +101,4 @@ Open the new intercepted service (e.g. https://laughing-benz-205.preview-beta.ed
 cd https://laughing-benz-205.preview-beta.edgestack.me
 ```
 
-This build version has been pushed to `docker.io/caseykurosawa/emojivoto-{service-name}:v13-rc0`
+This build version has been pushed to `docker.io/caseykurosawa/emojivoto-{service-name}:v13-rc0` as a new image for Rollouts.
