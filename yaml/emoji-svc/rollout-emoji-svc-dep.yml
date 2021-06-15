@@ -1,0 +1,87 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  annotations:
+    getambassador.io/rolloutId: f0a3dfb1-88ba-4842-a9cd-df4a5193c06f
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: emoji
+    app.kubernetes.io/part-of: emojivoto
+    app.kubernetes.io/version: v11
+  name: emoji
+  namespace: emojivoto
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: emoji-svc
+      version: v11
+  strategy:
+    canary:
+      canaryService: emoji-svc-canary
+      stableService: emoji-svc
+      steps:
+      - setWeight: 10
+      - pause:
+          duration: 180
+      - setWeight: 20
+      - pause:
+          duration: 180
+      - setWeight: 30
+      - pause:
+          duration: 180
+      - setWeight: 40
+      - pause:
+          duration: 180
+      - setWeight: 50
+      - pause:
+          duration: 180
+      - setWeight: 60
+      - pause:
+          duration: 180
+      - setWeight: 70
+      - pause:
+          duration: 180
+      - setWeight: 80
+      - pause:
+          duration: 180
+      - setWeight: 90
+      - pause:
+          duration: 180
+      - setWeight: 100
+      - pause:
+          duration: 180
+      trafficRouting:
+        ambassador:
+          mappings:
+          - emojivoto-mapping
+  template:
+    metadata:
+      annotations:
+        config.linkerd.io/skip-outbound-ports: 8081,8022,6000-7999
+        linkerd.io/inject: enabled
+      creationTimestamp: null
+      labels:
+        app: emoji-svc
+        version: v11
+    spec:
+      containers:
+      - env:
+        - name: GRPC_PORT
+          value: "8080"
+        - name: PROM_PORT
+          value: "8801"
+        image: docker.l5d.io/buoyantio/emojivoto-emoji-svc:v11
+        name: emoji-svc
+        ports:
+        - containerPort: 8080
+          name: grpc
+        - containerPort: 8801
+          name: prom
+        resources:
+          requests:
+            cpu: 100m
+      serviceAccountName: emoji
+status:
+  blueGreen: {}
+  canary: {}
