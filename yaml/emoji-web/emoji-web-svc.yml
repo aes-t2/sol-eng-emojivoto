@@ -7,7 +7,7 @@ metadata:
   annotations:
     a8r.io/bugs: "https://github.com/aes-t2/sol-eng-emojivoto/issues"
     a8r.io/chat: '#ambassador'
-    a8r.io/dependencies: emoji-svc.emojivoto, voting-svc.emojivoto
+    a8r.io/dependencies: emoji-svc.emojivoto-dev, voting-svc.emojivoto-dev
     a8r.io/description: gRPC API for voting and leaderboard
     a8r.io/documentation: https://www.getambassador.io/docs/latest/
     a8r.io/incidents: https://app.datadoghq.com/incidents/introduction
