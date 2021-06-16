@@ -78,6 +78,8 @@ Telepresence 2.3.1
 
 Tested on MacOS 11.4 Big Sur.  Version number in parenthesis was the version tested (6/15/2021).
 
+Requires membership to `aes-t2` organization (https://github.com/aes-t2/).  See `@mturner` for access.
+
 - Docker (20.10.6)
 - go (1.16.5)
 - protobuf (3.17.3)
@@ -246,9 +248,9 @@ Once the rollout is complete, go back to the emojivoto app to see the new change
 open https://emojivoto.linkerd.amb-labs.io
 ```
 
-## Revert back
+## Revert back to prep for next demo
 
-Re-run the same procedure creating a new rollout, but target `caseykurosawa/emojivoto-web v12` as the image version.
+Re-run the same procedure creating a new rollout, but target `caseykurosawa/emojivoto-web v12` as the image version to restore the original emojivoto-web.
 
 For Telepresence, run `telepresence quit` to disconnect all intercepts and disconnect from the cluster.
 
