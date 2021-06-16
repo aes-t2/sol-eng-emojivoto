@@ -78,6 +78,8 @@ Telepresence 2.3.1
 
 Tested on MacOS 11.4 Big Sur.  Version number in parenthesis was the version tested (6/15/2021).
 
+Requires membership to `aes-t2` organization (https://github.com/aes-t2/).  See `@mturner` for access.
+
 - Docker (20.10.6)
 - go (1.16.5)
 - protobuf (3.17.3)
