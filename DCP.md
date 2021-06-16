@@ -248,9 +248,9 @@ Once the rollout is complete, go back to the emojivoto app to see the new change
 open https://emojivoto.linkerd.amb-labs.io
 ```
 
-## Revert back
+## Revert back to prep for next demo
 
-Re-run the same procedure creating a new rollout, but target `caseykurosawa/emojivoto-web v12` as the image version.
+Re-run the same procedure creating a new rollout, but target `caseykurosawa/emojivoto-web v12` as the image version to restore the original emojivoto-web.
 
 For Telepresence, run `telepresence quit` to disconnect all intercepts and disconnect from the cluster.
 
