@@ -4,7 +4,7 @@ metadata:
   name: emojivoto-mapping
   namespace: emojivoto-staging
 spec:
-  host: emojivoto-staging.amb-labs.io
+  host: emojivoto-staging.linkerd.amb-labs.io
   precedence: 1
   prefix: /
   service: web-svc.emojivoto-staging:80
