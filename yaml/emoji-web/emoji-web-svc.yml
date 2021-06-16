@@ -4,6 +4,20 @@ kind: Service
 metadata:
   name: web-svc
   namespace: emojivoto-dev
+  annotations:
+    a8r.io/bugs: "https://github.com/aes-t2/sol-eng-emojivoto/issues"
+    a8r.io/chat: '#ambassador'
+    a8r.io/dependencies: emoji-svc.emojivoto, voting-svc.emojivoto
+    a8r.io/description: gRPC API for voting and leaderboard
+    a8r.io/documentation: https://www.getambassador.io/docs/latest/
+    a8r.io/incidents: https://app.datadoghq.com/incidents/introduction
+    a8r.io/logs: https://kibana.getambassador.io
+    a8r.io/owner: Solutions Engineering - Daniel Bryant
+    a8r.io/performance: https://https://linkerd.amb-labs.io//grafana/d/linkerd-namespace/linkerd-namespace?orgId=1&refresh=1m&var-namespace=emojivoto&var-deployment=web
+    a8r.io/repository: https://github.com/aes-t2/sol-eng-emojivoto
+    a8r.io/runbook: https://www.getambassador.io/docs/latest/topics/running/debugging/
+    a8r.io/support: https://support.datawire.io/hc/en-us
+    a8r.io/uptime: https://app.datadoghq.com/screen/integration/86/kubernetes---overview?from_ts=162
 spec:
   type: ClusterIP
   selector:
