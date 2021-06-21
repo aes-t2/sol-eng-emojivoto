@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: b119d75a-8456-4fe4-83d3-a116a8088d60
+    getambassador.io/rolloutId: 4b733ae0-420e-4940-93d7-fd84bcc0c3e6
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: emoji
@@ -57,7 +57,7 @@ spec:
           value: "8080"
         - name: PROM_PORT
           value: "8801"
-        image: caseykurosawa/emojivoto-emoji-svc:v12
+        image: caseykurosawa/emojivoto-emoji-svc:v13-rc0
         name: emoji-svc
         ports:
         - containerPort: 8080
