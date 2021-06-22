@@ -27,7 +27,7 @@ metadata:
     ### Ambassador support webpage
     a8r.io/support: https://support.datawire.io/hc/en-us
     ### Linkerd emojivoto web pod Grafana dashboard
-    a8r.io/uptime: https://linkerd.amb-labs.io/grafana/d/linkerd-pod/linkerd-pod?orgId=1&refresh=1m&var-namespace=emojivoto&var-pod=web-755775fdf7-bh5jz&var-deployment=&var-inbound=All&var-outbound=All
+    a8r.io/uptime: https://obs.linkerd.amb-labs.io/grafana/d/JGmAedg7z/ambassador-dashboard?orgId=1&refresh=5s
 spec:
   type: ClusterIP
   selector:
