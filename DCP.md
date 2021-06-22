@@ -6,6 +6,20 @@ The Cluster is set up such that there is an `emojivoto-dev` namespace with the e
 
 The sum of this work is on https://github.com/aes-t2/sol-eng-emojivoto.
 
+## Telepresence Hard Reset
+
+In order to do a hard-redeploy of the emojivoto-dev namespace (if you're running into intercept issues), run the following:
+
+1. `telepresence quit`
+2. `kubectl delete deploy -n emojivoto-dev --all`
+3. `kubectl delete svc -n emojivoto-dev --all`
+4. (from sol-eng-emojivoto directory) `git checkout dev`
+5. `cd yaml`
+6. `kubectl apply -f emoji-svc`
+7. `kubectl apply -f emoji-voting`
+8. `kubectl apply -f emoji-web`
+9. `cd .. && git checkout main`
+
 ## Service Catalog Notes
 
 Emoji-Web annotations and descriptions
