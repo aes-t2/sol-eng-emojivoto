@@ -196,6 +196,12 @@ This build version has been pushed to `docker.io/caseykurosawa/emojivoto-{servic
 
 ### Prerequisites
 
+(Required)
+
+- Enable Developer Preview mode in DCP.
+
+  Open the Developer Control Plane, go to the web-svc card under the Production column.  Select the Rollouts tab and a popup will ask you if you want to enable the feature.  Select Enable Rollouts to continue.  This only needs to be done once per user.
+
 (Optional)
 
 - Kubectl argo rollout plugin (v1.0.0)
