@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 4b733ae0-420e-4940-93d7-fd84bcc0c3e6
+    getambassador.io/rolloutId: eb136290-594e-4d53-b565-8e0333ffedff
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: emoji
