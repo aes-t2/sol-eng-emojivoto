@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 4b04219d-4a72-434e-a804-f03cd90ebf86
+    getambassador.io/rolloutId: dc4cf4b1-acbd-4f98-9f8e-13ad86bda2e2
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: web
@@ -24,19 +24,19 @@ spec:
       steps:
       - setWeight: 20
       - pause:
-          duration: 12
+          duration: 24
       - setWeight: 40
       - pause:
-          duration: 12
+          duration: 24
       - setWeight: 60
       - pause:
-          duration: 12
+          duration: 24
       - setWeight: 80
       - pause:
-          duration: 12
+          duration: 24
       - setWeight: 100
       - pause:
-          duration: 12
+          duration: 24
       trafficRouting:
         ambassador:
           mappings:
@@ -58,7 +58,7 @@ spec:
           value: voting-svc.emojivoto:8080
         - name: INDEX_BUNDLE
           value: dist/index_bundle.js
-        image: caseykurosawa/emojivoto-web:v12
+        image: caseykurosawa/emojivoto-web:v13-rc0
         name: web-svc
         ports:
         - containerPort: 8080
