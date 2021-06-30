@@ -16,7 +16,7 @@ metadata:
     a8r.io/logs: https://app.datadoghq.com/logs/activation
     a8r.io/owner: "@cakuros"
     ### REQUIRES LOGIN (admin:prom-operator): Argo Rollouts Grafana dashboard
-    a8r.io/performance: https://obs.linkerd.amb-labs.io/grafana/d/fDNtJHg7k/argo-rollouts?orgId=1&refresh=5s
+    a8r.io/performance: https://aes-demo.com/jaeger/search?end=1625056709148000&limit=20&lookback=1h&maxDuration&minDuration&service=productcatalogservice&start=1625053109148000
     ### Emojivoto repository
     a8r.io/repository: https://github.com/aes-t2/sol-eng-emojivoto
     ### Ambassador docs debugging page
@@ -24,7 +24,7 @@ metadata:
     ### Ambassador support webpage
     a8r.io/support: https://support.datawire.io/hc/en-us
     ### Linkerd emojivoto web pod Grafana dashboard
-    a8r.io/uptime: https://linkerd.amb-labs.io/grafana/d/linkerd-pod/linkerd-pod?orgId=1&refresh=1m&var-namespace=emojivoto&var-pod=web-755775fdf7-bh5jz&var-deployment=&var-inbound=All&var-outbound=All
+    a8r.io/uptime: https://aes-demo.com/grafana/d/R_NuxHVWk/ambassador-dashboard?refresh=1m&orgId=1
     a8r.io/rollouts.scm.branch: "main"
     a8r.io/rollouts.scm.path: "yaml/emoji-web"
     a8r.io/rollouts.image-repo.type: "dockerhub"
