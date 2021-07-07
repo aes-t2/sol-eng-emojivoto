@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: eb136290-594e-4d53-b565-8e0333ffedff
+    getambassador.io/rolloutId: a6dfee9a-f1e6-4b71-a48a-8b1fab6f2e6a
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: emoji
@@ -22,21 +22,12 @@ spec:
       canaryService: emoji-svc-canary
       stableService: emoji-svc
       steps:
-      - setWeight: 20
-      - pause:
-          duration: 12
       - setWeight: 40
       - pause:
-          duration: 12
-      - setWeight: 60
-      - pause:
-          duration: 12
+          duration: 30
       - setWeight: 80
       - pause:
-          duration: 12
-      - setWeight: 100
-      - pause:
-          duration: 12
+          duration: 30
       trafficRouting:
         ambassador:
           mappings:
@@ -57,7 +48,7 @@ spec:
           value: "8080"
         - name: PROM_PORT
           value: "8801"
-        image: caseykurosawa/emojivoto-emoji-svc:v13-rc0
+        image: caseykurosawa/emojivoto-emoji-svc:v12
         name: emoji-svc
         ports:
         - containerPort: 8080
