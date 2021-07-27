@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: aee41f17-afbd-4394-83a5-001af2cb08d9
+    getambassador.io/rolloutId: 338b975c-e224-43e9-aca8-90cb54f331a1
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: web
@@ -58,7 +58,7 @@ spec:
           value: voting-svc.emojivoto:8080
         - name: INDEX_BUNDLE
           value: dist/index_bundle.js
-        image: caseykurosawa/emojivoto-web:v13-rc0
+        image: caseykurosawa/emojivoto-web:v12
         name: web-svc
         ports:
         - containerPort: 8080
