@@ -36,6 +36,7 @@ spec:
     metadata:
       annotations:
         telepresence.getambassador.io/inject-traffic-agent: enabled
+        config.linkerd.io/skip-outbound-ports: "8081,8022,6000-7999"
       creationTimestamp: null
       labels:
         app: web-svc
