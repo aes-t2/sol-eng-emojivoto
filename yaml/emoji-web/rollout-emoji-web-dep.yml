@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: a75fe8e1-30e8-439a-8e03-0c53e34e4faa
+    getambassador.io/rolloutId: b95766d8-9b80-4b51-9ed8-48551dcb9265
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: web
@@ -22,12 +22,15 @@ spec:
       canaryService: web-svc-canary
       stableService: web-svc
       steps:
-      - setWeight: 50
+      - setWeight: 30
       - pause:
-          duration: 30
-      - setWeight: 100
+          duration: 20
+      - setWeight: 60
       - pause:
-          duration: 30
+          duration: 20
+      - setWeight: 90
+      - pause:
+          duration: 20
       trafficRouting:
         ambassador:
           mappings:
@@ -35,8 +38,8 @@ spec:
   template:
     metadata:
       annotations:
+        config.linkerd.io/skip-outbound-ports: 8081,8022,6000-7999
         telepresence.getambassador.io/inject-traffic-agent: enabled
-        config.linkerd.io/skip-outbound-ports: "8081,8022,6000-7999"
       creationTimestamp: null
       labels:
         app: web-svc
@@ -52,7 +55,7 @@ spec:
           value: voting-svc.emojivoto:8080
         - name: INDEX_BUNDLE
           value: dist/index_bundle.js
-        image: caseykurosawa/emojivoto-web:v12
+        image: caseykurosawa/emojivoto-web:v13-rc0
         name: web-svc
         ports:
         - containerPort: 8080
