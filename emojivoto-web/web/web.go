@@ -349,7 +349,7 @@ func (app *WebApp) indexHandler(w http.ResponseWriter, r *http.Request) {
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>Emoji Vote</title>
+			<title>Casey's Emoji Svc</title>
 			<link rel="icon" href="/img/favicon.ico">
 			<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60040560-4"></script>
